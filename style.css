@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "cabecera cabecera"
+        "menu menu"
+        "contenido publicidad"
+        "pie pie";
+    gap: 10px;
+    background-color: #3f6b67;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor > div {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #328f86;
+}
+
+.cabecera {
+    grid-area: cabecera;
+    background-color: #a7a75d;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #ca8578;
+}
+
+.contenido {
+    grid-area: contenido;
+    background-color: #d2dffa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.publicidad {
+    grid-area: publicidad;
+    background-color: #9cccaa;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.pie {
+    grid-area: pie;
+    background-color: #9d7bb9;
+}
+
+.contenido .texto {
+    background-color: #465a6b; /* Fondo naranja-rojizo para los divs en contenido */
+    padding: 20px;
+    margin: 10px;
+}
+
+.publicidad .texto {
+    background-color: #528152; /* Fondo verde claro para los divs en publicidad */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #006400;
+}
